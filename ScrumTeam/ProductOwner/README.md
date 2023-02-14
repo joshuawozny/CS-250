@@ -1,1 +1,1 @@
-# CS-250: Scrum Team -Product Owner
+# CS-250: Scrum Team - Product Owner
