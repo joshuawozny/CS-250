@@ -1,1 +1,2 @@
-# CS-250
+# CS-250: Software Development Lifecycle
+This course introduces effective methodologies and models that are necessary for developing high quality software. All phases of activity within the lifecycle, including analysis, design, development, and testing, are explored with an emphasis on the roles of the contributors within each phase. Software development methodologies are examined with a focus on the application of agile processes.
