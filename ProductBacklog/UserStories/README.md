@@ -1,1 +1,2 @@
 # CS-250: User Stories
+User Stories are a subset of use cases that describes a use case from a user's perspective, rather than a technical and process-driven perspective. They are the fundamental unit of work completed within a Scrum sprint. User Stories are constantly being prioritized and refined by the Product Owner to make them sprint-ready. Upon the completion of one sprint, the team reviews the prioritized Product Backlog during a Sprint Planning ceremony and add user stories to the Sprint Backlog that they are committing to complete within the upcoming sprint.
