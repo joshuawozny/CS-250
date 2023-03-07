@@ -5,6 +5,7 @@ According to the Scrum Guide the Development Team is a self-organizing professio
 * Journal: Devloper A descriptive narrative describing the work of the Developer, Nicky, in our fictional team working on a project to develop a Travel Company's website. 
 * Journal: Tester A descriptive narrative describing the work of the Tester, Brian, in our fictional team working on a project to develop a Travel Company's website.
 * Sample Tester Email to Product Owner to demonstrate a typical type of team interaction
+* Test Case documentation for a subset of User Stories used as samples in this project
 * A software [increment for the SNHU Travel project](https://github.com/joshuawozny/CS-250/tree/main/ScrumTeam/DeveloperTeam/SNHUTravel) implementing the user story <b><i>Top Five Destination List</i></b> - "As an end user, I want to click a link to view the top five destinations list, so that I can see the most popular locations for travel to educate myself on the best places to go."
 
 
