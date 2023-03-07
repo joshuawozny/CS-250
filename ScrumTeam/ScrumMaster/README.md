@@ -5,7 +5,7 @@ The Scrum Master is also responsible for removing impediments to the development
 created by the Scrum Team (Overeem, 2016).
 
 ## Contents
-* Journal: A descriptive first person narrative describing the work of the Scrum Master, Ron in our fictional team working on a project to develop a Tarvel Companines website. 
+* Journal: A descriptive first person narrative describing the work of the Scrum Master, Ron in our fictional team working on a project to develop a Travel Company's website. 
 
 
 
