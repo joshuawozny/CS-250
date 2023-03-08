@@ -3,5 +3,5 @@ SNHU Travel would like to extend their offerings to an online platform that allo
 collecting business requirements, user stories and using the Scrum framework to develop a finished application. The sample application displays the Top 5 Destinations.
 
 ## Folder Contents
-* Initial version of application displaying Destinations as a list on a single page
+* Initial version of application displaying Destinations as a basic list view 
 * Updated version of application displaying Destinations as a slide show with Previous and Next buttons
