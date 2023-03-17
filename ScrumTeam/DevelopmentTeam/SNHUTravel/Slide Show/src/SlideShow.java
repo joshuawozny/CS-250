@@ -30,7 +30,7 @@ public class SlideShow extends JFrame {
 	public SlideShow() throws HeadlessException {
 		initComponent();
 	}
-	// TODO need to consider changing background or text color as reading the description is difficult
+	// Changed background color to improve readability and resize to account for the image source text
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -40,8 +40,8 @@ public class SlideShow extends JFrame {
 		cardText = new CardLayout();
 		slidePane = new JPanel();
 		textPane = new JPanel();
-		textPane.setBackground(Color.BLUE);
-		textPane.setBounds(5, 470, 790, 50);
+		textPane.setBackground(Color.pink);  //changed to pink
+		textPane.setBounds(5, 470, 790, 60);  //resize height to 60
 		textPane.setVisible(true);
 		buttonPane = new JPanel();
 		btnPrev = new JButton();
@@ -73,7 +73,7 @@ public class SlideShow extends JFrame {
 		getContentPane().add(slidePane, BorderLayout.CENTER);
 		getContentPane().add(textPane, BorderLayout.SOUTH);
 
-		buttonPane.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 10));
+		buttonPane.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 2)); //vgap adjusted to 2
 
 		btnPrev.setText("Previous");
 		btnPrev.addActionListener(new ActionListener() {
@@ -125,7 +125,7 @@ public class SlideShow extends JFrame {
 	private String getResizeIcon(int i) {
 		String image = ""; 
 		if (i==1){
-			image = "<html><body><img width= '800' height='500' src='" + getClass().getResource("/resources/Luna.jpg") + "'</body></html>";
+			image = "<html><body><a ><img width= '800' height='500' src='" + getClass().getResource("/resources/Luna.jpg") + "'</a></body></html>";
 		} else if (i==2){
 			image = "<html><body><img width= '800' height='500' src='" + getClass().getResource("/resources/Eastman.jpg") + "'</body></html>";
 		} else if (i==3){
@@ -163,21 +163,23 @@ public class SlideShow extends JFrame {
 	 */
 	
 	 
+	// Updated the Destination and description
+	// Added source of image
 	/**
 	 * Method to get the text values
 	 */
 	private String getTextDescription(int i) {
 		String text = ""; 
 		if (i==1){
-			text = "<html><body><font size='5'>#1 Cala Luna Boutique Hotels & Villas</font> <br>Wellness experience in a tropical paradise.</body></html>";
+			text = "<html><body><font size='2'>Photo by Cole Allen on Unsplash</font> <br><font size='4'>#1 Cala Luna Boutique Hotels & Villas</font> <br>Wellness experience in a tropical paradise. </body></html>";
 		} else if (i==2){
-			text = "<html><body>#2 Spa Eastman (Quebec, Canada) <br>Wake your senses as you submerge in a hot pool on a cold day.</body></html>";
+			text = "<html><body><font size='2'>Photo by Jernej Graj on Unsplash</font> <br>#2 Spa Eastman (Quebec, Canada) <br>Wake your senses as you submerge in a hot pool on a cold day.</body></html>";
 		} else if (i==3){
-			text = "<html><body>#3 Isrotel Dead Sea Resort & Spa (Israel) <br>Enjoy the Dead Sea's natural wonders and sulfur pools.</body></html>";
+			text = "<html><body><font size='2'>Photo by Alex Bertha on Unsplash</font> <br>#3 Isrotel Dead Sea Resort & Spa (Israel) <br>Enjoy the Dead Sea's natural wonders and sulfur pools.</body></html>";
 		} else if (i==4){
-			text = "<html><body>#4 Hilton Sedona Resort At Bell Rock (Sedona, Arizona) <br>Locally inspired therapies featuring an invigorating red clay body wrap.</body></html>";
+			text = "<html><body><font size='2'>Photo by Eneko Uruñuela on Unsplash</font> <br>#4 Hilton Sedona Resort At Bell Rock (Sedona, Arizona) <br>Locally inspired therapies featuring an invigorating red clay body wrap.</body></html>";
 		} else if (i==5){
-			text = "<html><body>#5 Nobu Hotel Los Cabos (Cabo San Lucas, Mexico) <br>Clear your mind, body, and spirit with Asian-inspired traditions.</body></html>";
+			text = "<html><body><font size='2'>Photo by Roberto Nickson on Unsplash</font> <br>#5 Nobu Hotel Los Cabos (Cabo San Lucas, Mexico) <br>Clear your mind, body, and spirit with Asian-inspired traditions.</body></html>";
 		}
 		return text;
 	}
