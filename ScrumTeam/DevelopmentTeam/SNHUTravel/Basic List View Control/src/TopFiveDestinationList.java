@@ -6,11 +6,8 @@ public class TopFiveDestinationList {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-	//Create a new list frame object
             	TopDestinationListFrame topDestinationListFrame = new TopDestinationListFrame();
-	//Set Title
                 topDestinationListFrame.setTitle("Top 5 Destination List");
-	//Set visibility
                 topDestinationListFrame.setVisible(true);
             }
         });
@@ -22,9 +19,8 @@ class TopDestinationListFrame extends JFrame {
     private DefaultListModel listModel;
 
     public TopDestinationListFrame() {
-        //Uses the superclass' constructor
         super("Top Five Destination List");
-        // Set Frame attributes
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(900, 750);
 
@@ -32,20 +28,14 @@ class TopDestinationListFrame extends JFrame {
 
 
         //Make updates to your top 5 list below. Import the new image files to resources directory.
-        //Add NYC destination with downloaded image from unsplash, by Florian Wehde
-        addDestinationNameAndPicture("1. New York City (The Big Apple)", new ImageIcon(getClass().getResource("/resources/NYC.jpg"))); 
-        //Add Boston destination with downloaded image from unsplash, by Todd Kent
-        addDestinationNameAndPicture("2. Boston (Home of the Red Sox)", new ImageIcon(getClass().getResource("/resources/Boston.jpg")));  
-        //Add Washington DC destination with downloaded image from unsplash, by Harold Mendoza
-        addDestinationNameAndPicture("3. Washington DC (United States Capitol)", new ImageIcon(getClass().getResource("/resources/DC.jpg"))); 
-        //Add Old Orchard destination with downloaded image from unsplash, by Philippe Murray-Pietsch
-        addDestinationNameAndPicture("4. Old Orchard Beach (Vacation Land)", new ImageIcon(getClass().getResource("/resources/OldOrchard.jpg"))); 
-       //Add White Mountains destination with downloaded image from unsplash, by Andrew Keymaster
-        addDestinationNameAndPicture("5. White Mountain National Forest (Outdoor Family Fun)", new ImageIcon(getClass().getResource("/resources/WhiteMountains.jpg"))); 
-
-        /*    HTML version of image creators
+        addDestinationNameAndPicture("1. New York City (The Big Apple) ---> Photo by Florian Wehde on Unsplash", new ImageIcon(getClass().getResource("/resources/NYC.jpg")));
+        addDestinationNameAndPicture("2. Boston (Home of the Red Sox) ---> Photo by Todd Kent on Unsplash", new ImageIcon(getClass().getResource("/resources/Boston.jpg")));
+        addDestinationNameAndPicture("3. Washington DC (United States Capitol) ---> Photo by Harold Mendoza on Unsplash", new ImageIcon(getClass().getResource("/resources/DC.jpg")));
+        addDestinationNameAndPicture("4. Old Orchard Beach (Vacation Land) ---> Photo by Philippe Murray-Pietsch on Unsplash", new ImageIcon(getClass().getResource("/resources/OldOrchard.jpg")));
+        addDestinationNameAndPicture("5. White Mountain National Forest (Outdoor Family Fun) ---> Photo by Andrew Keymaster on Unsplash", new ImageIcon(getClass().getResource("/resources/WhiteMountains.jpg")));
+        /*
          * 	NYC: Photo by <a href="https://unsplash.com/@florianwehde?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Wehde</a> on <a href="https://unsplash.com/s/photos/NYC?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-		 *	Boston: Photo by <a href="https://unsplash.com/@churchoftodd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">todd kent</a> on <a href="https://unsplash.com/s/photos/Boston?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+		 *	Boston: Photo by <a href="https://unsplash.com/@churchoftodd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Todd Kent</a> on <a href="https://unsplash.com/s/photos/Boston?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 		 * 	Washington, DC: Photo by <a href="https://unsplash.com/es/@haroldrmendoza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Harold Mendoza</a> on <a href="https://unsplash.com/s/photos/washington-dc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 		 *	Old Orchard Beach: Photo by <a href="https://unsplash.com/@pmpietsch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Philippe Murray-Pietsch</a> on <a href="https://unsplash.com/s/photos/Old-Orchard-Beach?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 		 *	White Mountain: Photo by <a href="https://unsplash.com/@arnidan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew Keymaster</a> on <a href="https://unsplash.com/s/photos/White-Mountains-NH?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -53,9 +43,11 @@ class TopDestinationListFrame extends JFrame {
         
         JList list = new JList(listModel);
         JScrollPane scrollPane = new JScrollPane(list);
-        
-        TextAndIconListCellRenderer renderer = new TextAndIconListCellRenderer(2);
 
+        TextAndIconListCellRenderer renderer = new TextAndIconListCellRenderer(2);
+        
+        // Set background color
+        list.setBackground(Color.pink);
         list.setCellRenderer(renderer);
 
         getContentPane().add(scrollPane, BorderLayout.CENTER);
